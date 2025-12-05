@@ -65,12 +65,21 @@
     <div class="booking-container">
         <h2 id="book-title">حجز موعد جديد</h2>
         <p id="book-desc">احصل على استشارة طبية دقيقة بملء النموذج أدناه.</p>
-        <form class="booking-form" onsubmit="event.preventDefault(); alert('تم إرسال طلبك بنجاح!');">
-            <input type="text" id="ph-name" placeholder="الاسم الكامل" required>
-            <input type="tel" id="ph-phone" placeholder="رقم الهاتف" required>
-            <input type="date" required>
-            <button type="submit" class="btn" id="btn-book">تأكيد الحجز</button>
-        </form>
+		
+		
+		
+		
+		
+<form class="booking-form" onsubmit="sendToWhatsapp(event)">
+    <input type="text" id="ph-name" placeholder="الاسم الكامل" required>
+    <input type="tel" id="ph-phone" placeholder="رقم الهاتف" required>
+    <input type="date" id="booking-date" required>
+    <button type="submit" class="btn" id="btn-book">تأكيد الحجز</button>
+</form>
+		
+		
+		
+		
     </div>
 </section>
 

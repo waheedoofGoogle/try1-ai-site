@@ -43,3 +43,23 @@ document.getElementById("s3-text").innerText = t.s3Text;
 document.getElementById("s4-title").innerText = t.s4Title;
 document.getElementById("s4-text").innerText = t.s4Text;
 }
+
+function sendToWhatsapp(e) {
+    e.preventDefault(); // منع إعادة تحميل الصفحة
+
+    const name = document.getElementById("ph-name").value;
+    const phone = document.getElementById("ph-phone").value;
+    const date = document.getElementById("booking-date").value;
+
+    const phoneNumber = "963992369841"; // رقم العيادة
+
+    // تنسيق الرسالة
+    const message = `مرحباً، أريد حجز موعد في العيادة.%0a` +
+                    `👤 الاسم: ${name}%0a` +
+                    `📱 الهاتف: ${phone}%0a` +
+                    `📅 التاريخ المطلوب: ${date}`;
+
+    // فتح رابط واتساب
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(url, '_blank');
+}
