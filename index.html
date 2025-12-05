@@ -11,8 +11,14 @@
 
 
 <div class="lang-bar">
-<a href="#" onclick="setLang('ar')">العربية</a>
-<a href="#" onclick="setLang('en')">English</a>
+    <div class="contact-info">
+        <span id="contact-label">للحجز والاستفسار:</span>
+        <a href="tel:+963992369841" dir="ltr">📞 +963 992 369 841</a>
+    </div>
+    <div class="lang-switch">
+        <a href="#" onclick="setLang('ar')">العربية</a>
+        <a href="#" onclick="setLang('en')">English</a>
+    </div>
 </div>
 
 
@@ -54,6 +60,23 @@
 </div>
 </section>
 
+
+<section class="booking-section">
+    <div class="booking-container">
+        <h2 id="book-title">حجز موعد جديد</h2>
+        <p id="book-desc">احصل على استشارة طبية دقيقة بملء النموذج أدناه.</p>
+        <form class="booking-form" onsubmit="event.preventDefault(); alert('تم إرسال طلبك بنجاح!');">
+            <input type="text" id="ph-name" placeholder="الاسم الكامل" required>
+            <input type="tel" id="ph-phone" placeholder="رقم الهاتف" required>
+            <input type="date" required>
+            <button type="submit" class="btn" id="btn-book">تأكيد الحجز</button>
+        </form>
+    </div>
+</section>
+
+<a href="https://wa.me/963992369841" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+</a>
 
 <footer>
 © 2025 مركز العناية بالعيون — جميع الحقوق محفوظة
